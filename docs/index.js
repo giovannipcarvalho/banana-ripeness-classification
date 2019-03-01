@@ -43,7 +43,6 @@ async function predict(image) {
         return model.predict(batched);
     });
 
-
     showResult(logits);
     
     const totalTime = performance.now() - startTime;
@@ -51,15 +50,18 @@ async function predict(image) {
 }
 
 async function showResult(logits) {
+    predict_result.innerText = '';
+
     const message = {
-        0: 'This banana looks a little green! Wait a little before eating that.',
-        1: 'This banana looks rotten or overripe. I would not eat that if I were you.',
+        0: 'This banana looks a little green! Wait a little longer before eating it.',
+        1: 'This banana looks rotten or overripe. I would not eat it if I were you.',
         2: 'Yum! Looks ripe to me!'
     }
 
     const values = await logits.data();
-    const class_idx = logits.argMax(1).dataSync();
+    console.log(values);
 
+    const class_idx = logits.argMax(1).dataSync();
     predict_result.innerText = message[class_idx];
 }
 
