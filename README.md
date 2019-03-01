@@ -16,5 +16,7 @@ $ tensorflowjs_converter --input_format=keras ./keras_model.h5 ./tfjs_model
 
 ## References
 https://towardsdatascience.com/keras-transfer-learning-for-beginners-6c9b8b7143e
+
 https://hackernoon.com/classifying-images-using-tensorflow-js-keras-58431c4df04
+
 https://github.com/tensorflow/tfjs-examples/tree/master/mobilenet
