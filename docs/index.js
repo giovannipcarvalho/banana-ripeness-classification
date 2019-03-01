@@ -33,6 +33,9 @@ const modelDemo = async () => {
 };
 
 async function predict(image) {
+    // clean text before predicting
+    predict_result.innerText = '';
+
     status('Predicting...');
     const startTime = performance.now();
     const logits = tf.tidy(() => {
@@ -50,8 +53,6 @@ async function predict(image) {
 }
 
 async function showResult(logits) {
-    predict_result.innerText = '';
-
     const message = {
         0: 'This banana looks a little green! Wait a little longer before eating it.',
         1: 'This banana looks rotten or overripe. I would not eat it if I were you.',
