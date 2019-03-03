@@ -1,5 +1,5 @@
-# banana-ripeness-detector
-Banana ripeness detector with Neural Networks.
+# banana-ripeness-classification
+Banana ripeness classification with Neural Networks.
 
 ```text
 data        - Manually labeled data (256 images of green, ripe and overripe bananas).
