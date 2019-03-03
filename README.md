@@ -2,7 +2,7 @@
 Banana ripeness classification with Neural Networks.
 
 ```text
-data        - Manually labeled data (256 images of green, ripe and overripe bananas).
+data        - Manually labeled data (255 images of green, ripe and overripe bananas).
 docs        - Web UI for inference (includes pretrained model).
 notebooks   - Keras code for training the model.
 sources     - URLs for the images in the data (many broken links).
